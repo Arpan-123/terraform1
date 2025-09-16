@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  name: 'Ai-ka-pool'
 
 steps:
 - script: echo Hello, world!
