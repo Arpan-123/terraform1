@@ -9,16 +9,16 @@ terraform {
 
 provider "azurerm" {
   features {}
-  subscription_id = "a7d5c3b8-efab-4b09-938f-ce6ca000d654"
+  subscription_id = "51984565-3b14-41c7-900f-cf01ff601798"
   
 }
 
-arzurerm_resource_group "ofc-rg1" {
+resource "azurerm_resource_group" "ofc-rg1" {
   name     = "example-resources1"
   location = "West Europe"
 }
 
-azurerm_storage_account "ofc-sa1" {
+resource "azurerm_storage_account" "ofc-sa1" {
   name                     = "examplestorageaccount1"
   resource_group_name      = azurerm_resource_group.ofc-rg1.name
   location                 = azurerm_resource_group.ofc-rg1.location
