@@ -13,20 +13,20 @@ provider "azurerm" {
   
 }
 
-resource "azurerm_resource_group" "ofc-rg1" {
-  name     = "example-resources1"
-  location = "West Europe"
-}
+# resource "azurerm_resource_group" "ofc-rg1" {
+#   name     = "example-resources1"
+#   location = "West Europe"
+# }
 
-resource "azurerm_storage_account" "ofc-sa1" {
-  name                     = "examplestorageaccount1"
-  resource_group_name      = azurerm_resource_group.ofc-rg1.name
-  location                 = azurerm_resource_group.ofc-rg1.location
-  account_tier             = "Standard"
-  account_replication_type = "LRS"
+# resource "azurerm_storage_account" "ofc-sa1" {
+#   name                     = "examplestorageaccount1"
+#   resource_group_name      = azurerm_resource_group.ofc-rg1.name
+#   location                 = azurerm_resource_group.ofc-rg1.location
+#   account_tier             = "Standard"
+#   account_replication_type = "LRS"
 
-  tags = {
-    environment = "Terraform"
-  }
-}
+#   tags = {
+#     environment = "Terraform"
+#   }
+# }
 
